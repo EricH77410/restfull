@@ -1,0 +1,31 @@
+<!-- <head>
+  <title>restfull</title>
+</head>
+
+<body>
+  <h1>Test rest API</h1>
+  {{> addForm}}
+  {{> test}}
+</body> -->
+
+<template name="band">
+    {{> addForm}}
+  <ul>
+    {{# each data}}
+        <li>{{{name}}} {{instr}} <a class="delete" href="#">X</a> - <a href="/member/{{_id}}">E</a></li>
+    {{/ each}}
+  </ul>
+</template>
+
+<template name="editMember">
+  <h1>{{name}}</h1>
+  <h3>{{instr}}</h3>
+</template>
+
+<template name="addForm">
+  <form class="addPlayer">
+    <input id="name" type="text" name="name" value="" placeholder="name"/>
+    <input id="instr" type="text" name="instr" value="" placeholder="instr"/>
+    <button class="sub" type="button" name="button">Add</button>
+  </form>
+</template>

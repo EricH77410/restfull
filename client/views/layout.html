@@ -1,0 +1,19 @@
+<template name="mainLayout">
+  <h1>Test Meteor</h1>
+
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/band">Band member</a></li>
+      <li><a href="{{pathFor route='accueil'}}">Accueil</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    {{> yield}}
+  </div>
+</template>
+
+<template name="calc">
+  <h1>{{res}}</h1>
+</template>
